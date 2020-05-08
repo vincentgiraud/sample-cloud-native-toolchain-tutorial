@@ -53,7 +53,7 @@ describe('tutorial (' + desired.browserName + ')', function() {
     var username = process.env.SAUCE_USERNAME;
     var accessKey = process.env.SAUCE_ACCESS_KEY;
 
-    browser = wd.promiseChainRemote('ondemand.saucelabs.com', 80, username, accessKey);
+    browser = wd.promiseChainRemote('ondemand.eu-central-1.saucelabs.com', 443, username, accessKey);
 
     if (process.env.VERBOSE) {
 
