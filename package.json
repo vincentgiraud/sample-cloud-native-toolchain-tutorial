@@ -9,7 +9,7 @@
     "karma_unit_test": "gulp dev-karma",
     "mocha_unit_test": "gulp dev-mocha",
     "lint": "gulp lint",
-    "test": "grunt test:sauce:parallel"
+    "test": "grunt test:sauce:parallel --force"
   },
   "keywords": [
     "bluemix",
