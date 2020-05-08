@@ -1,7 +1,7 @@
 var webdriver = require('selenium-webdriver'),
 /* Change the username and accessKey to your Saucelabs.com credentials */
-username = "SAUCE_USERNAME",
-accessKey = "SAUCE_ACCESS_KEY",
+username = process.env.SAUCE_USERNAME,
+accessKey = process.env.SAUCE_ACCESS_KEY,
 /* Base URL sets the target test application */
 baseUrl = process.env.APP_URL,
 /* driver instantiates via callback */
@@ -18,8 +18,8 @@ this.timeout(40000);
       'platform': 'macOS 10.13',
       'version': '11.1',
       /* Pass Sauce User Name and Access Key */
-      'username': process.env.SAUCE_USERNAME,
-      'accessKey': process.env.SAUCE_ACCESS_KEY,
+      'username': username,
+      'accessKey': accessKey,
       'name': this.test.title,
     }).usingServer("https://" + username + ":" + accessKey +
       "@ondemand.eu-central-1.saucelabs.com:443/wd/hub").build();
