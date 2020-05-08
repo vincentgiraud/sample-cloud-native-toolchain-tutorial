@@ -8,7 +8,7 @@ baseUrl = process.env.APP_URL,
 driver;
 
 /* Describe is a way to group your tests together and set test suite parameters like timetous */
-describe('Instant Sauce Test Module 1', function () {
+describe('Instant Sauce Test', function () {
 this.timeout(40000);
   /* it represents an actual test, the parameters are the title of the test case */
   it('should-open-safari', function (done) {
@@ -18,10 +18,10 @@ this.timeout(40000);
       'platform': 'macOS 10.13',
       'version': '11.1',
       /* Pass Sauce User Name and Access Key */
-      'username': 'vgiraud',
-      'accessKey': '199f0470-8a41-44c1-963d-362fd4093573',
+      'username': process.env.SAUCE_USERNAME,
+      'accessKey': process.env.SAUCE_ACCESS_KEY,
       'name': this.test.title,
-    }).usingServer("https://" + process.env.SAUCE_USERNAME + ":" + process.env.SAUCE_ACCESS_KEY +
+    }).usingServer("https://" + username + ":" + accessKey +
       "@ondemand.eu-central-1.saucelabs.com:443/wd/hub").build();
     /* The driver navigates to the target application, stored in this variable baseUrl*/
     driver.get(baseUrl);
