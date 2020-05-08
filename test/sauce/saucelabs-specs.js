@@ -13,7 +13,7 @@ if (process.env.APP_URL && process.env.APP_URL !== 'undefined') {
     url = url + "/";
   }
 } else if (process.env.APP_NAME && process.env.APP_NAME !== '') {
-  url = 'http://' + process.env.APP_NAME + '-test.mybluemix.net/';
+  url = 'http://' + process.env.APP_NAME + '-test.eu-de.mybluemix.net/';
 }
 
 var assert = require('assert');
